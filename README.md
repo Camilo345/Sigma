@@ -1,1 +1,1 @@
-# Sigma
+# SigmaGit
