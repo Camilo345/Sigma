@@ -5,6 +5,7 @@ using UnityEngine;
 public class controlCambioEscenario : MonoBehaviour
 {
     public ManagerEscenario me;
+    public bool avanzar = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,13 +31,15 @@ public class controlCambioEscenario : MonoBehaviour
 
     public void avanzarEscenario()
     {
+        if(avanzar)
         me.cambiarEscenario(1);
       
     }
 
     public void retrocerEscenario()
     {
-        me.cambiarEscenario(-1);
+        if (avanzar)
+            me.cambiarEscenario(-1);
 
     }
 
