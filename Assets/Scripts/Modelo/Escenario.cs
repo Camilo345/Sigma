@@ -15,11 +15,14 @@ public class Escenario : MonoBehaviour
 
     private string dialogo;
     private int palabraActual=0;
-
+    public bool avanzar = true;
+    public controlCambioEscenario cce;
     // Start is called before the first frame update
 
     private void OnEnable()
     {
+        cce = GameObject.FindWithTag("inputsUsuario").GetComponent<controlCambioEscenario>();
+        cce.avanzar = avanzar;
         characteresDialogo = new List<string>();
         txtNombre.text = NombrePersonaje;
       
