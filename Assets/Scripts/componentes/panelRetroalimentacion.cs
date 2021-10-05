@@ -22,18 +22,14 @@ public class panelRetroalimentacion : MonoBehaviour
     void Update()
     {
         if(this.gameObject.activeInHierarchy&& Input.GetKeyDown(KeyCode.Return)){
-            cce.avanzar = true;
+           
             if (esBueno)
             {
+                cce.avanzar = true;
                 cce.avanzarEscenario();
                
             }
-            else
-            {
-                cce.retrocerEscenario();
-                cce.avanzarEscenario();
-                
-            }
+            
             this.gameObject.SetActive(false);
         } 
     }
